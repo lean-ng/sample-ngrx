@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'todo-shell',
-  templateUrl: './todo-shell.component.html',
-  styleUrls: ['./todo-shell.component.scss']
+  templateUrl: './todo-shell.component.html'
 })
 export class TodoShellComponent implements OnInit {
 
