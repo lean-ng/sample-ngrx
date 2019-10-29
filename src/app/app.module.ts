@@ -18,7 +18,12 @@ import { EffectsModule } from '@ngrx/effects';
     BrowserModule,
     HttpClientModule,
 
-    StoreModule.forRoot({ app: appReducer }),
+    StoreModule.forRoot({ app: appReducer },{
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true
+      }
+    }),
     EffectsModule.forRoot([AppEffects]),
 
     TodosModule
