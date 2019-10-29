@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TodoShellComponent } from './components/todo-shell/todo-shell.component';
+
 import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+
 import { todosReducer } from './state/reducers';
-
-
+import { TodosEffects } from './state/effects';
 
 @NgModule({
   declarations: [TodoShellComponent],
   imports: [
     CommonModule,
-    StoreModule.forFeature('todos', todosReducer)
+    StoreModule.forFeature('todos', todosReducer),
+    EffectsModule.forFeature([TodosEffects])
   ],
   exports: [TodoShellComponent]
 })
