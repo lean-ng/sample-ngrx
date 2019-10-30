@@ -18,7 +18,7 @@ export class TodosHttpService {
   }
 
   create(title: string) {
-    return this.http.post<Todo>(baseUrl, { title, completed: false }).toPromise();
+    return this.http.post<Todo>(baseUrl, { title, completed: false });
   }
 
 

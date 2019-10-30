@@ -7,9 +7,10 @@ import { EffectsModule } from '@ngrx/effects';
 
 import { todosReducer } from './state/reducers';
 import { TodosEffects } from './state/effects';
+import { TodoInputComponent } from './components/todo-input/todo-input.component';
 
 @NgModule({
-  declarations: [TodoShellComponent],
+  declarations: [TodoShellComponent, TodoInputComponent],
   imports: [
     CommonModule,
     StoreModule.forFeature('todos', todosReducer),

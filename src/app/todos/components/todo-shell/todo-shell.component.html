@@ -2,6 +2,9 @@
   <header class="mt-8">
     <h1 class="text-6xl text-center">todos</h1>
   </header>
+  <section class="input">
+    <todo-input (createRequest)="onCreateRequest($event)"></todo-input>
+  </section>
   <section class="main">
     <ul class="todo-list">
       <li *ngFor="let t of todos$ | async">{{ t.title }}</li>
